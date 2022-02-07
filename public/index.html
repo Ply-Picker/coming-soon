@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plypicker</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.6.6/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.6.6/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.6.6/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="animation">
+        <div class="one spin-one"></div>
+        <div class="two spin-two"></div>
+        <div class="three spin-one"></div>
+      </div>
+
+
+
+      <div class="content">
+        <img style="width: 70%;" class="fade-in-image"
+          src="https://raw.githubusercontent.com/AnkitKumarvaid/Plypicker-cooming-soon-web-page/master/1.png"
+          alt="logo">
+        <br><br>
+        <h1 class="fade-in-text" style="color:gray">COMING SOON IN INDIA</h1>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.firestore().doc('/foo/bar').get().then(() => { });
+      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      // firebase.analytics(); // call to activate
+      // firebase.analytics().logEvent('tutorial_completed');
+      // firebase.performance(); // call to activate
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAdveKqL7g8T-_pBqkzw5PZm8GxdUVUaqI",
+    authDomain: "ply--picker.firebaseapp.com",
+    projectId: "ply--picker",
+    storageBucket: "ply--picker.appspot.com",
+    messagingSenderId: "850319181692",
+    appId: "1:850319181692:web:eb88b92079fa4108d906f9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+</body>
+
+</html>
